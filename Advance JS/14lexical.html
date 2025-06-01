@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <button id="orange">Orange</button>
+    <button id="brown">Brown</button>
+</body>
+<script>
+    document.querySelector('#orange').addEventListener('click', handler('orange'))
+    document.querySelector('#brown').addEventListener('click', handler("brown"))
+
+    function handler(color) {
+        function colorChanger() {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        return colorChanger
+    }
+</script>
+
+</html>

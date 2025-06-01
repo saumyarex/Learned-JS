@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 75vh;
+}
+
+#maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    padding-inline: 20px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+#inputcity input {
+    background-color: rgb(63, 63, 63);
+    border: none;
+    width: 177px;
+    height: 40px;
+    text-indent: 10px;
+    border-radius: 5px;
+    font-size: medium;
+    color: white;
+    margin-right: 10px;
+}
+
+#inputcity {
+    display: flex;
+}
+
+#inputcity input:focus {
+    outline: none;
+}
+
+#inputcity button {
+    background-color: rgb(103, 8, 193);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    font-size: medium;
+}

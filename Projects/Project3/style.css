@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(115, 114, 114);
+}
+
+h1{
+    color: aquamarine;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+}
+
+#clock{
+    background-color: rgb(74, 243, 148);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px
+}

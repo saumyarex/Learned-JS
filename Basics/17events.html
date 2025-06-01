@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        #main {
+            display: flex;
+        }
+
+        .sub {
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <button>Click</button>
+    <div id="main">
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+    </div>
+
+</body>
+<script>
+    document.querySelector('body').addEventListener('click', (e) => {
+        console.log(`Target ${e.target}`)
+        console.log(`toelement ${e.srcElement}`)
+        console.log(`Location ${e.shiftKey}`)
+    })
+</script>
+
+</html>

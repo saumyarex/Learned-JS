@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+</head>
+<body>
+    <h1 style="color: blueviolet; background-color: black; display: flex; justify-content: center;">To do</h1>
+
+    <div style="display: flex; justify-content: center;">
+        <input id="taskName" type="text" placeholder="Task" style="width: 250px; height: 30px;" >
+        <button style="margin-left: 20px; margin-right: 20px; width: 100px;" onclick="addTask(value)"> Add Task</button>
+        <button style="width: 100px;" onclick="restTask()">Rest</button>
+    </div>
+
+    <div id="taskList" style="margin-top: 40px; display: flex; justify-content: center;" >
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Task Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="/DOM/2script.js"></script>
+</html>

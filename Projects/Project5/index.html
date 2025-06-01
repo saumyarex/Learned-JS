@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: black; color:white;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <h1>Background change in 1 sec interval</h1>
+        <div>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+
+    function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+    function bgColorChange() {
+        const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        document.querySelector('body').style.backgroundColor = rndCol
+        
+    }
+    
+    let colorChanger = null
+    window.document.querySelector('#start').addEventListener('click', () => {
+        if(colorChanger === null){
+            colorChanger = setInterval(bgColorChange,1000)
+        }
+    })
+
+    window.document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(colorChanger)
+        colorChanger = null
+        console.log('Stopped')
+    })
+</script>
+</html>

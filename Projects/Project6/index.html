@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: wheat;">
+    <h1> Press any key to get details</h1>
+    <div id="details"></div>
+</body>
+<script>
+    window.addEventListener('keydown' , (e) => {
+        const details = document.querySelector('#details')
+        details.innerHTML = ` 
+        <table>
+            <thead>
+                <tr>
+                    <td>Key</td>
+                    <td>Keycode</td>
+                    <td>code</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${e.key === " " ? "Space" : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </tbody>
+        </table>
+        `
+    })
+
+</script>
+</html>

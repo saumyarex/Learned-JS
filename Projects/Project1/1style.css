@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color : rgb(164, 155, 155);
+    display: flex;
+    justify-content: center;
+}
+
+#colorChoises{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    color: rgb(202, 56, 56);
+    padding: 40px;
+    margin: 20px;
+    border: solid;
+    border-width: 5px;
+    border-color: aqua;
+}
+
+#black {
+    background-color: black;
+
+}
+
+#white{
+    background-color: white;
+}
+
+#pink{
+    background-color: pink;
+}
+
+#brown{
+    background-color: brown;
+}
+
+#purple{
+    background-color: purple;
+}

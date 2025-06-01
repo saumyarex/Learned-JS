@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #tasklist {
+            max-width: 74%;
+            margin-top: 20px;
+        }
+
+
+        .taskelement {
+            font-size: medium;
+            background-color: rgb(66, 66, 66);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 13px;
+
+        }
+
+        .taskelement p {
+            width: 161px;
+            overflow-wrap: break-word;
+            margin-right: 6px;
+            margin-left: 7px;
+            cursor: pointer;
+        }
+
+        .taskelement button {
+            font-size: medium;
+            height: 29px;
+            border-style: none;
+            border-radius: 5px;
+            margin-right: 7px;
+            background-color: rgb(226, 43, 43);
+            color: white;
+        }
+
+        .taskelement button:hover {
+            background-color: rgb(219, 81, 81);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: black; color: white;">
+
+
+    <div id="maincontainer" style="display: flex; flex-direction: column; align-items: center;">
+        <div id="input"><input type="text"></div>
+        <button>Add</button>
+        <div id="tasklist">
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    const taskButton = document.querySelector('button')
+
+    taskButton.addEventListener('click', () => {
+        let task = document.querySelector('input').value
+        taskCreation(task)
+    })
+
+    const taskListBox = document.querySelector('#tasklist')
+
+    function taskCreation(task) {
+        let taskElement = document.createElement('div')
+        taskElement.setAttribute('class', 'taskelement')
+        taskButton.innerHTML = `<p>${task}</p> <button>Delete<button>`
+        taskListBox.append(taskElement)
+    }
+</script>
+
+</html>
