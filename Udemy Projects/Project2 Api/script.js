@@ -6,14 +6,14 @@ getWeatherButton.addEventListener('click',(e) => {
 })
 
 function getWeather(city){
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=6a7c10274f13321f2c2c3730572e897b`).
+    fetch(`http://api.openweathermap.org/geo`).
 then((res)=>{
  return res.json()
 }).then((res)=>{
     // console.log(res['0']['name'])
     // console.log(res['0']['lat'])
     // console.log(res['0']['lon'])
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${res['0']['lat']}&lon=${res['0']['lon']}&appid=6a7c10274f13321f2c2c3730572e897b`)
+    fetch(`https://api.openweathermap.org/data/`)
     .then((res)=>{
         return res.json()
     }).then((data)=>{
